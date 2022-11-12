@@ -1,25 +1,28 @@
 # ShakshyamAdventOfCode
 
-Welcome to the Advent of Code[^aoc] Kotlin project created by [shakshyam7][github] using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
+# Reflection
+For Advent Of Code 1 I choose From 2017 Day 2 <br>
 
-In this repository, shakshyam7 is about to provide solutions for the puzzles using [Kotlin][kotlin] language.
+### Solution
+~~~
+var checkSum = 0
+val line = input.split('\n')
+for (values in line) {
+    val num = values.split(' ')
+    checkSum += num.max().toInt() - num.min().toInt()
+}
+println(checkSum)
+~~~
 
-If you're stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
+First I split the input by new Line and then loop through each values then i splited the values by space by which i extracted the min and max value using min() and max() function and converted it to integer and calculated the sum.
 
-- [Kotlin docs][docs]
-- [Kotlin Slack][slack]
-- Template [issue tracker][issues]
+It took me long time 3-4 days to figure out what was I doing wrong and I got help from instructor to complete this problem. I figured I was approaching the problem right way but I was not able to get the solution I wanted until i got help eith the problem. 
+
+I looked in kotlin documentation for collection, list and map, Regex while figuring out the solution, I also went through learn CS course and looked there for resourses like List and Map.
+
+I did not discussed the problem with any peers, tried to do it on my own but when i couldnot i discussed with instructor and got the solution.
+
+I learned through recent project from jetbrains academy to write idiomatic code which i appled in second solution to make the code short.
 
 
-[^aoc]:
-    [Advent of Code][aoc] – An annual event of Christmas-oriented programming challenges started December 2015.
-    Every year since then, beginning on the first day of December, a programming puzzle is published every day for twenty-five days.
-    You can solve the puzzle and provide an answer using the language of your choice.
 
-[aoc]: https://adventofcode.com
-[docs]: https://kotlinlang.org/docs/home.html
-[github]: https://github.com/shakshyam7
-[issues]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template/issues
-[kotlin]: https://kotlinlang.org
-[slack]: https://surveys.jetbrains.com/s3/kotlin-slack-sign-up
-[template]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template
