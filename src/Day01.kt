@@ -1,10 +1,19 @@
+
 fun main() {
     fun part1(input: List<String>): Int {
-        return input.size
+        var checkSum = 0
+        for (values in input) {
+            val num = values.split(' ')
+            checkSum += num.maxOf { it.toInt() } - num.minOf { it.toInt() }
+        }
+        return checkSum
     }
 
     fun part2(input: List<String>): Int {
-        return input.size
+        var checkSum = 0
+        for (values in input) checkSum += (values.split(' ').maxOf { it.toInt() } - values.split(' ')
+            .minOf { it.toInt() })
+        return checkSum
     }
 
     // test if implementation meets criteria from the description, like:
@@ -15,3 +24,6 @@ fun main() {
     println(part1(input))
     println(part2(input))
 }
+
+
+
