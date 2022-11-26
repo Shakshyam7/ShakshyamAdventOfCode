@@ -4,7 +4,7 @@
 For Advent Of Code 1 I choose From 2017 Day 2 <br>
 
 ### Solution
-~~~
+```kotlin
 var checkSum = 0
 val line = input.split('\n')
 for (values in line) {
@@ -12,9 +12,9 @@ for (values in line) {
     checkSum += num.max().toInt() - num.min().toInt()
 }
 println(checkSum)
-~~~
+```
 
-First I split the input by new Line and then loop through each values then i splited the values by space by which i extracted the min and max value using min() and max() function and converted it to integer and calculated the sum.
+First I split the input by new Line and then loop through each values then i splited the values by space by which i extracted the min and max value using `min()` and `max()` function and converted it to integer and calculated the sum.
 
 It took me long time 3-4 days to figure out what was I doing wrong and I got help from instructor to complete this problem. I figured I was approaching the problem right way but I was not able to get the solution I wanted until i got help eith the problem. 
 
